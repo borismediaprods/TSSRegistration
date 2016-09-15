@@ -1,5 +1,28 @@
 body {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/8/83/Sky_cloudy.JPG);
+    background: url(/images/pano.jpg);
     background-size: cover; 
 	opacity: 0.7;
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 95%,
+		0 0,
+		0 100%,
+		0 0;
+	animation: 50s para infinite linear;
 }
+
+@media (min-width: 1120px), (min-height: 630px) {
+    body { background-size: 200% 200%; }
+}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 0,
+			1000px 100%,
+			400px 0;
+		}
+	}
